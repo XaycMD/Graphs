@@ -1,16 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class AdjacencyMatrixUI : DrawableMatrix
+  public class IncidenceMatrixUI : DrawableMatrix
   {
     //---------------------------------------------------------------------
     // Editor
     //---------------------------------------------------------------------
 
     [SerializeField] private int _itemSize;
-    [SerializeField] private Toggle _togglePrefab;
+    [SerializeField] private IncidenceToggle _togglePrefab;
     [SerializeField] private Text _textPrefab;
     [SerializeField] private int _defaultItemsCount = 2;
 
@@ -90,16 +90,16 @@ namespace edu.ua.pavlusyk.masters
       {
         for (var j = 0; j < itemsCount; j++)
         {
-          InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), false);
+          InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 0);
         }
       }
     }
 
-    private void InstantiateToggle(Vector2 position, bool isOn)
+    private void InstantiateToggle(Vector2 position, int value)
     {
       var toggle = Instantiate(_togglePrefab, _transform);
       toggle.GetComponent<RectTransform>().anchoredPosition = position;
-      toggle.isOn = isOn;
+      toggle.Value = value;
     }
   }
 }

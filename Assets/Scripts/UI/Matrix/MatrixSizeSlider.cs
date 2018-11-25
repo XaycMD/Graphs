@@ -11,7 +11,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     [SerializeField] private Text _size;
-    [SerializeField] private AdjacencyMatrixUI _adjacencyMatrix;
+    [SerializeField] private DrawableMatrix _matrix;
 
     //---------------------------------------------------------------------
     // Internal
@@ -35,7 +35,7 @@ namespace edu.ua.pavlusyk.masters
     public void OnValueChanged()
     {
       SetText((int) _slider.value);
-      _adjacencyMatrix.DrawMatrix((int) _slider.value);
+      _matrix.DrawMatrix((int) _slider.value);
     }
 
     public void SetText(int size)
