@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bde3c30-3424-4660-89c8-241957e75485" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/AlgorythmsPanel.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AlgorythmsPanel.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_close.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_open.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrix.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,63 +18,49 @@
     <session id="782166516">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1198" />
+          <entry key="cs" value="2045" />
           <entry key="gitignore" value="7" />
-          <entry key="txt" value="9" />
+          <entry key="txt" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1198" />
+          <entry key="C#" value="2045" />
           <entry key="Git file" value="7" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="2" />
+          <entry key="cs" value="3" />
           <entry key="gitignore" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="2" />
+          <entry key="C#" value="3" />
           <entry key="Git file" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding>
-                <marker date="1543140099189" expanded="true" signature="6:78" ph="..." />
-                <marker date="1543140099189" expanded="true" signature="113:179" ph="{...}" />
-                <marker date="1543140099189" expanded="true" signature="164:177" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state>
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
               <folding>
                 <marker date="1543145286590" expanded="false" signature="6:44" ph="..." />
-                <marker date="1543145286590" expanded="true" signature="79:2128" ph="{...}" />
                 <marker date="1543145286590" expanded="true" signature="123:2126" ph="{...}" />
                 <marker date="1543145286590" expanded="true" signature="132:293" ph="/* --------------------------------------------------------------------- ... */" />
                 <marker date="1543145286590" expanded="true" signature="402:565" ph="/* --------------------------------------------------------------------- ... */" />
@@ -99,22 +77,54 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Matrix/AdjacencyMatrixUI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+              <folding>
+                <marker date="1543152273958" expanded="false" signature="6:100" ph="..." />
+                <marker date="1543152273958" expanded="true" signature="135:2842" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="186:2840" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="195:356" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543152273958" expanded="true" signature="505:668" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543152273958" expanded="true" signature="713:876" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543152273958" expanded="true" signature="902:961" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="967:1128" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543152273958" expanded="true" signature="1166:1261" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="1271:1433" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543152273958" expanded="true" signature="1459:1565" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="1509:1559" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="1611:1734" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="1777:2036" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="1863:2030" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="2100:2274" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="2320:2602" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="2406:2596" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="2459:2588" ph="{...}" />
+                <marker date="1543152273958" expanded="true" signature="2667:2836" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Matrix/AdjacencyMatrixUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Header/HeaderSlide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Matrix/AdjacencyMatrixUI.cs" />
       </list>
     </option>
   </component>
@@ -148,13 +158,23 @@
               <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
               <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
             </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="UI" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="UI" type="1045f7f1:UnityExplorerNode" />
+              <item name="Matrix" type="1045f7f1:UnityExplorerNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
       </pane>
       <pane id="FileSystemExplorer">
         <subPane>
@@ -166,6 +186,9 @@
           </expand>
           <select />
         </subPane>
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -213,7 +236,8 @@
       <option name="presentableId" value="Default" />
       <updated>1543139675411</updated>
       <workItem from="1543139677983" duration="29000" />
-      <workItem from="1543139938220" duration="4359000" />
+      <workItem from="1543139938220" duration="6064000" />
+      <workItem from="1543151068785" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="Add Ryder">
       <created>1543139978444</created>
@@ -222,11 +246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543139978444</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add slidable panels with headers">
+      <created>1543145623822</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543145623822</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4388000" />
+    <option name="totallyTimeSpent" value="7303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -238,12 +269,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -258,6 +289,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -275,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Ryder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Ryder" />
+    <MESSAGE value="Add slidable panels with headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add slidable panels with headers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -295,25 +328,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <marker date="1543140099189" expanded="true" signature="6:78" ph="..." />
-            <marker date="1543140099189" expanded="true" signature="113:179" ph="{...}" />
-            <marker date="1543140099189" expanded="true" signature="164:177" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state>
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
           <folding>
             <marker date="1543145286590" expanded="false" signature="6:44" ph="..." />
-            <marker date="1543145286590" expanded="true" signature="79:2128" ph="{...}" />
             <marker date="1543145286590" expanded="true" signature="123:2126" ph="{...}" />
             <marker date="1543145286590" expanded="true" signature="132:293" ph="/* --------------------------------------------------------------------- ... */" />
             <marker date="1543145286590" expanded="true" signature="402:565" ph="/* --------------------------------------------------------------------- ... */" />
@@ -325,6 +346,35 @@
             <marker date="1543145286590" expanded="true" signature="1445:1607" ph="/* --------------------------------------------------------------------- ... */" />
             <marker date="1543145286590" expanded="true" signature="1666:2122" ph="{...}" />
             <marker date="1543145286590" expanded="true" signature="1738:2019" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Matrix/AdjacencyMatrixUI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <marker date="1543152273958" expanded="false" signature="6:100" ph="..." />
+            <marker date="1543152273958" expanded="true" signature="135:2842" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="186:2840" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="195:356" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543152273958" expanded="true" signature="505:668" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543152273958" expanded="true" signature="713:876" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543152273958" expanded="true" signature="902:961" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="967:1128" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543152273958" expanded="true" signature="1166:1261" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="1271:1433" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543152273958" expanded="true" signature="1459:1565" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="1509:1559" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="1611:1734" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="1777:2036" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="1863:2030" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="2100:2274" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="2320:2602" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="2406:2596" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="2459:2588" ph="{...}" />
+            <marker date="1543152273958" expanded="true" signature="2667:2836" ph="{...}" />
           </folding>
         </state>
       </provider>

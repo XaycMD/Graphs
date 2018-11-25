@@ -8,10 +8,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="AdjacencyMatrixUI.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="Header" t="Include">
               <e p="PanelSlide.cs" t="Include" />
+            </e>
+            <e p="Matrix" t="Include">
+              <e p="AdjacencyMatrixUI.cs" t="Include" />
             </e>
           </e>
         </e>
