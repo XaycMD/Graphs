@@ -14,6 +14,7 @@ namespace edu.ua.pavlusyk.masters
     [SerializeField] private int _itemSize;
     [SerializeField] private Toggle _togglePrefab;
     [SerializeField] private Text _textPrefab;
+    [SerializeField] private int _defaultItemsCount = 2;
 
     //---------------------------------------------------------------------
     // Internal
@@ -28,6 +29,11 @@ namespace edu.ua.pavlusyk.masters
     private void Awake()
     {
       _transform = transform as RectTransform;
+    }
+
+    private void Start()
+    {
+      DrawMatrix(_defaultItemsCount);
     }
 
     //---------------------------------------------------------------------
@@ -56,18 +62,18 @@ namespace edu.ua.pavlusyk.masters
     
     private void SetSize(int itemsCount)
     {
-      var size = _itemSize * ((itemsCount + 1) * 2 - 1);
+      var size = _itemSize * (itemsCount + 1);
       _transform.sizeDelta = new Vector2(size, size);
     }
 
     private void DrawText(int itemsCount)
     {
-      var position = _itemSize * 2;
+      var position = _itemSize;
 
       for (var i = 0; i < itemsCount; i++)
       {
-        InstantiateText(new Vector2(position + i * _itemSize * 2, 0), i);
-        InstantiateText(new Vector2(0, -(position + i * _itemSize * 2)), i);
+        InstantiateText(new Vector2(position + i * _itemSize, 0), i);
+        InstantiateText(new Vector2(0, -(position + i * _itemSize)), i);
       }
     }
 
@@ -80,13 +86,13 @@ namespace edu.ua.pavlusyk.masters
 
     private void DrawToggles(int itemsCount)
     {
-      var position = _itemSize * 2;
+      var position = _itemSize;
 
       for (var i = 0; i < itemsCount; i++)
       {
         for (var j = 0; j < itemsCount; j++)
         {
-          InstantiateToggle(new Vector2(position + i * _itemSize * 2, -(position + j * _itemSize * 2)), false);
+          InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), false);
         }
       }
     }
