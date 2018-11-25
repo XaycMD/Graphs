@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bde3c30-3424-4660-89c8-241957e75485" name="Default Changelist" comment="" />
+    <list default="true" id="9bde3c30-3424-4660-89c8-241957e75485" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graphs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AlgorythmsPanel.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AlgorythmsPanel.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_close.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Algorythms/ic_open.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrix.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +27,96 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="1198" />
+          <entry key="gitignore" value="7" />
+          <entry key="txt" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="1198" />
+          <entry key="Git file" value="7" />
+          <entry key="PLAIN_TEXT" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="2" />
+          <entry key="gitignore" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="2" />
+          <entry key="Git file" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <marker date="1543140099189" expanded="true" signature="6:78" ph="..." />
+                <marker date="1543140099189" expanded="true" signature="113:179" ph="{...}" />
+                <marker date="1543140099189" expanded="true" signature="164:177" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <folding>
+                <marker date="1543145286590" expanded="false" signature="6:44" ph="..." />
+                <marker date="1543145286590" expanded="true" signature="79:2128" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="123:2126" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="132:293" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543145286590" expanded="true" signature="402:565" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543145286590" expanded="true" signature="645:808" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543145286590" expanded="true" signature="834:893" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="899:1060" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543145286590" expanded="true" signature="1093:1273" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="1307:1435" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="1445:1607" ph="/* --------------------------------------------------------------------- ... */" />
+                <marker date="1543145286590" expanded="true" signature="1666:2122" ph="{...}" />
+                <marker date="1543145286590" expanded="true" signature="1738:2019" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Header/HeaderSlide.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -36,10 +132,30 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="FileSystemExplorer" proportions="" version="1">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
@@ -70,6 +186,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -81,11 +213,20 @@
       <option name="presentableId" value="Default" />
       <updated>1543139675411</updated>
       <workItem from="1543139677983" duration="29000" />
+      <workItem from="1543139938220" duration="4359000" />
     </task>
+    <task id="LOCAL-00001" summary="Add Ryder">
+      <created>1543139978444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543139978444</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29000" />
+    <option name="totallyTimeSpent" value="4388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -99,16 +240,10 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -116,20 +251,31 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Ryder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Ryder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -140,5 +286,48 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AdjacencyMatrixUI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <marker date="1543140099189" expanded="true" signature="6:78" ph="..." />
+            <marker date="1543140099189" expanded="true" signature="113:179" ph="{...}" />
+            <marker date="1543140099189" expanded="true" signature="164:177" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Header/PanelSlide.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <marker date="1543145286590" expanded="false" signature="6:44" ph="..." />
+            <marker date="1543145286590" expanded="true" signature="79:2128" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="123:2126" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="132:293" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543145286590" expanded="true" signature="402:565" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543145286590" expanded="true" signature="645:808" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543145286590" expanded="true" signature="834:893" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="899:1060" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543145286590" expanded="true" signature="1093:1273" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="1307:1435" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="1445:1607" ph="/* --------------------------------------------------------------------- ... */" />
+            <marker date="1543145286590" expanded="true" signature="1666:2122" ph="{...}" />
+            <marker date="1543145286590" expanded="true" signature="1738:2019" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\HouseMD\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\HouseMD\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Graphs.-1419142060.00" t="ExcludeRecursive" />
-    <e p="D:\Projects\Graphs" t="IncludeFlat">
+    <e p="C:\Users\HouseMD\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Graphs.455899444.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Graphs" t="IncludeRecursive">
       <e p=".git\info\exclude" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="AdjacencyMatrixUI.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Header" t="Include">
+              <e p="PanelSlide.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Graphs.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>
