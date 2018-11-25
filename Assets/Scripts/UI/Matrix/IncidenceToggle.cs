@@ -50,6 +50,9 @@ namespace edu.ua.pavlusyk.masters
       }
     }
 
+    public Vector2 Index { get; set; }
+    public Action<int, int, int> OnValueChanged { get; set; }
+
     //---------------------------------------------------------------------
     // Messages
     //---------------------------------------------------------------------
@@ -77,6 +80,8 @@ namespace edu.ua.pavlusyk.masters
           Value = 0;
           break;
       }
+      
+      OnValueChanged.Invoke((int) Index.x, (int)Index.y, Value);
     }
   }
 }

@@ -10,7 +10,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     [SerializeField] private int _itemSize;
-    [SerializeField] private Toggle _togglePrefab;
+    [SerializeField] private AdjacentToggle _togglePrefab;
     [SerializeField] private Text _textPrefab;
     [SerializeField] private int _defaultItemsCount = 2;
 
@@ -19,6 +19,13 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     private RectTransform _transform;
+    private AdjacentToggle[,] _toggles;
+    
+    //---------------------------------------------------------------------
+    // Properties
+    //---------------------------------------------------------------------
+    
+    public bool[,] Matrix { get; set; }
 
     //---------------------------------------------------------------------
     // Messages
@@ -41,6 +48,7 @@ namespace edu.ua.pavlusyk.masters
     public override void DrawMatrix(int size)
     {
       Clear();
+      SetMatrix(size);
       SetSize(size);
       DrawText(size);
       DrawToggles(size);
@@ -50,12 +58,23 @@ namespace edu.ua.pavlusyk.masters
     // Helpers
     //---------------------------------------------------------------------
 
+    private void OnToggleClick(int i, int j, bool value)
+    {
+      Matrix[i, j] = value;
+      Debug.Log("Matrix[" + i + ", " + j + "] = " + Matrix[i, j]);
+    }
+    
     private void Clear()
     {
       foreach (Transform item in transform)
       {
         Destroy(item.gameObject);
       }
+    }
+
+    private void SetMatrix(int size)
+    {
+      Matrix = new bool[size, size];
     }
     
     private void SetSize(int itemsCount)
@@ -85,21 +104,26 @@ namespace edu.ua.pavlusyk.masters
     private void DrawToggles(int itemsCount)
     {
       var position = _itemSize;
+      _toggles = new AdjacentToggle[itemsCount, itemsCount];
 
       for (var i = 0; i < itemsCount; i++)
       {
         for (var j = 0; j < itemsCount; j++)
         {
-          InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), false);
+          _toggles[i, j] = InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), false);
+          _toggles[i, j].Index = new Vector2(i, j);
+          _toggles[i, j].OnValueChanged = OnToggleClick;
         }
       }
     }
 
-    private void InstantiateToggle(Vector2 position, bool isOn)
+    private AdjacentToggle InstantiateToggle(Vector2 position, bool isOn)
     {
       var toggle = Instantiate(_togglePrefab, _transform);
       toggle.GetComponent<RectTransform>().anchoredPosition = position;
-      toggle.isOn = isOn;
+      toggle.Value = isOn;
+
+      return toggle;
     }
   }
 }

@@ -39,7 +39,6 @@ namespace edu.ua.pavlusyk.masters
         }
         else
         {
-          Debug.Log("Quitting");
           Application.Quit();
         }
       }

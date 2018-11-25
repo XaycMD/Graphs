@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemSize: 48
-  _togglePrefab: {fileID: 114016053100140264, guid: 1efd43391af593d4aa66006f0137ad2a,
+  _togglePrefab: {fileID: 114238751229840460, guid: 1efd43391af593d4aa66006f0137ad2a,
     type: 2}
   _textPrefab: {fileID: 114037802221739820, guid: 4e11062b7acd89c4bac7fb2090daf885,
     type: 2}

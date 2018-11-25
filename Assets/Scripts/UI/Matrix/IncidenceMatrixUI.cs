@@ -19,6 +19,13 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     private RectTransform _transform;
+    private IncidenceToggle[,] _toggles;
+    
+    //---------------------------------------------------------------------
+    // Properties
+    //---------------------------------------------------------------------
+    
+    public int[,] Matrix { get; set; }
 
     //---------------------------------------------------------------------
     // Messages
@@ -41,6 +48,7 @@ namespace edu.ua.pavlusyk.masters
     public override void DrawMatrix(int size)
     {
       Clear();
+      SetMatrix(size);
       SetSize(size);
       DrawText(size);
       DrawToggles(size);
@@ -50,12 +58,23 @@ namespace edu.ua.pavlusyk.masters
     // Helpers
     //---------------------------------------------------------------------
 
+    private void OnToggleClick(int i, int j, int value)
+    {
+      Matrix[i, j] = value;
+      Debug.Log("Matrix[" + i + ", " + j + "] = " + Matrix[i, j]);
+    }
+    
     private void Clear()
     {
       foreach (Transform item in transform)
       {
         Destroy(item.gameObject);
       }
+    }
+    
+    private void SetMatrix(int size)
+    {
+      Matrix = new int[size, size];
     }
     
     private void SetSize(int itemsCount)
@@ -85,21 +104,26 @@ namespace edu.ua.pavlusyk.masters
     private void DrawToggles(int itemsCount)
     {
       var position = _itemSize;
-
+      _toggles = new IncidenceToggle[itemsCount, itemsCount];
+      
       for (var i = 0; i < itemsCount; i++)
       {
         for (var j = 0; j < itemsCount; j++)
         {
-          InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 0);
+          _toggles[i, j] = InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 0);
+          _toggles[i, j].Index = new Vector2(i, j);
+          _toggles[i, j].OnValueChanged = OnToggleClick;
         }
       }
     }
 
-    private void InstantiateToggle(Vector2 position, int value)
+    private IncidenceToggle InstantiateToggle(Vector2 position, int value)
     {
       var toggle = Instantiate(_togglePrefab, _transform);
       toggle.GetComponent<RectTransform>().anchoredPosition = position;
       toggle.Value = value;
+
+      return toggle;
     }
   }
 }
