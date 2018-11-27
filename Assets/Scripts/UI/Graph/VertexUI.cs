@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class VertexUI : MonoBehaviour, IDragHandler
+  public class VertexUI : MonoBehaviour, IDragHandler, IPointerClickHandler
   {
     //---------------------------------------------------------------------
     // Editor
@@ -17,6 +18,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     private int _index;
+    private bool _dragged;
     
     //---------------------------------------------------------------------
     // Properties
@@ -45,8 +47,39 @@ namespace edu.ua.pavlusyk.masters
 
     public void OnDrag(PointerEventData eventData)
     {
-      if(eventData.button == PointerEventData.InputButton.Left) 
+      if (eventData.button == PointerEventData.InputButton.Left)
+      {
         (transform as RectTransform).anchoredPosition = Input.mousePosition;
+        _dragged = true;
+      }
+      
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+      if (_dragged)
+      {
+        _dragged = false;
+        return;
+      }
+      
+      switch (eventData.button)
+      {
+        case PointerEventData.InputButton.Left:
+          
+          if (!EdgeDrawer.Instance.Drawing)
+          {
+            EdgeDrawer.Instance.StartDrawing(transform as RectTransform);
+          }
+          else
+          {
+            EdgeDrawer.Instance.StopDrawing(transform as RectTransform);
+          }
+          break;
+        case PointerEventData.InputButton.Right:
+          DeleteVertex();
+          break;
+      }
     }
   }
 }

@@ -9,6 +9,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
 
     [SerializeField] private VertexUI _vertexUiPrefab;
+    [SerializeField] private RectTransform _verticesPlaceholder;
     
     //---------------------------------------------------------------------
     // Messages
@@ -25,7 +26,9 @@ namespace edu.ua.pavlusyk.masters
 
     public void CreateVertex()
     {
-      var vertex = Instantiate(_vertexUiPrefab, transform);
+      if (EdgeDrawer.Instance.Drawing) return;
+      
+      var vertex = Instantiate(_vertexUiPrefab, _verticesPlaceholder);
       (vertex.transform as RectTransform).anchoredPosition = Input.mousePosition;
       vertex.Index = Graph.VertexCount;
       Graph.AddVertex();
@@ -36,6 +39,17 @@ namespace edu.ua.pavlusyk.masters
     public void RedrawMatrix()
     {
       MatrixUI.Instance.DrawMatrix(Graph.Vertices);
+    }
+    
+    public void Clear()
+    {
+      foreach (Transform vertex in _verticesPlaceholder)
+      {
+        Destroy(vertex.gameObject);
+      }
+      
+      Graph.Reset();
+      RedrawMatrix();
     }
   }
 }
