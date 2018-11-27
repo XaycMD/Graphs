@@ -30,5 +30,16 @@ namespace edu.ua.pavlusyk.masters
         _text.text = value.ToString();
       }
     }
+    
+    //---------------------------------------------------------------------
+    // Public
+    //---------------------------------------------------------------------
+
+    public void DeleteVertex()
+    {
+      Graph.DeleteVertex(_index);
+      MatrixUI.Instance.DrawMatrix(Graph.Vertices);
+      Destroy(gameObject);
+    }
   }
 }

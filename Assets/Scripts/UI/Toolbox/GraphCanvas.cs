@@ -35,7 +35,7 @@ namespace edu.ua.pavlusyk.masters
 
     public void RedrawMatrix()
     {
-      IncidenceMatrixUI.Instance.DrawMatrix(Graph.Vertices);
+      MatrixUI.Instance.DrawMatrix(Graph.Vertices);
     }
   }
 }

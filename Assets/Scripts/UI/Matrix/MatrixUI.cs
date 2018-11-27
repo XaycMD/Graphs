@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class IncidenceMatrixUI : Singleton<IncidenceMatrixUI>
+  public class MatrixUI : Singleton<MatrixUI>
   {
     //---------------------------------------------------------------------
     // Editor

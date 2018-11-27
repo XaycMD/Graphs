@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114359977044257834}
   - component: {fileID: 58409702364286026}
   - component: {fileID: 50893211008504084}
+  - component: {fileID: 114554272521979828}
   m_Layer: 5
   m_Name: Vertex
   m_TagString: Untagged
@@ -157,6 +158,38 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114554272521979828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524028331264808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2a50365a5db094e8a01c3a02db3be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onLeftButtonClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _onRightButtonClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114359977044257834}
+        m_MethodName: DeleteVertex
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &222020198252799604
 CanvasRenderer:
   m_ObjectHideFlags: 1
