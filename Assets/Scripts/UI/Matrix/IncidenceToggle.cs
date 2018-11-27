@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class IncidenceToggle : MonoBehaviour, IPointerClickHandler
+  public class IncidenceToggle : MonoBehaviour
   {
     //---------------------------------------------------------------------
     // Editor
@@ -50,9 +49,6 @@ namespace edu.ua.pavlusyk.masters
       }
     }
 
-    public Vector2 Index { get; set; }
-    public Action<int, int, int> OnValueChanged { get; set; }
-
     //---------------------------------------------------------------------
     // Messages
     //---------------------------------------------------------------------
@@ -60,28 +56,6 @@ namespace edu.ua.pavlusyk.masters
     private void Awake()
     {
       _currentState = GetComponent<Image>();
-    }
-
-    //---------------------------------------------------------------------
-    // Events
-    //---------------------------------------------------------------------
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-      switch (Value)
-      {
-        case 0:
-          Value = 1;
-          break;
-        case 1:
-          Value = -1;
-          break;
-        case -1:
-          Value = 0;
-          break;
-      }
-      
-      OnValueChanged.Invoke((int) Index.x, (int)Index.y, Value);
     }
   }
 }
