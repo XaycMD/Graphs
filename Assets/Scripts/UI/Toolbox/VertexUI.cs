@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class VertexUI : MonoBehaviour
+  public class VertexUI : MonoBehaviour, IDragHandler
   {
     //---------------------------------------------------------------------
     // Editor
@@ -37,9 +38,15 @@ namespace edu.ua.pavlusyk.masters
 
     public void DeleteVertex()
     {
-      Graph.DeleteVertex(_index);
+      Graph.DeleteVertex(Index);
       MatrixUI.Instance.DrawMatrix(Graph.Vertices);
       Destroy(gameObject);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+      if(eventData.button == PointerEventData.InputButton.Left) 
+        (transform as RectTransform).anchoredPosition = Input.mousePosition;
     }
   }
 }
