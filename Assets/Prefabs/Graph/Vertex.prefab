@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 114338145636437904}
-  _startIndicator: {fileID: 0}
+  _startIndicator: {fileID: 1676498014345786}
 --- !u!114 &114497632725786650
 MonoBehaviour:
   m_ObjectHideFlags: 1

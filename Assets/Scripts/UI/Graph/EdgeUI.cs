@@ -102,6 +102,7 @@ namespace edu.ua.pavlusyk.masters
 		public void SetHighlighted(bool value)
 		{
 			if(!value) _arrowStart.gameObject.SetActive(false);
+			SetArrowActive();
 			_body.color = _arrowEnd.color = _arrowStart.color = value ? _highlightedColor : _usualColor;
 		}
 
