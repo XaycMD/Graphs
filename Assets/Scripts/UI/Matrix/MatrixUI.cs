@@ -86,8 +86,8 @@ namespace edu.ua.pavlusyk.masters
         for (var j = 0; j < vertices.Count; j++)
         {
           InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 
-            vertices[i].ConnectedTo.Contains(vertices[j]) ? 1 : 
-              vertices[j].ConnectedTo.Contains(vertices[i]) ? -1 : 0);
+            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? vertices[i].ConnectedTo[vertices[j]] : 
+              vertices[j].ConnectedTo.ContainsKey(vertices[i]) ? vertices[j].ConnectedTo[vertices[i]] : 0);
         }
       }
     }

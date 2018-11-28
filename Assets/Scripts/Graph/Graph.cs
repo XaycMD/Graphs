@@ -33,9 +33,9 @@ namespace edu.ua.pavlusyk.masters
       Vertices.Remove(GetVertex(index));
     }
 
-    public static void ConnectVertex(int i, int j)
+    public static void ConnectVertex(int i, int j, int weight)
     {
-      GetVertex(i).ConnectedTo.Add(GetVertex(j));
+      GetVertex(i).ConnectedTo.Add(GetVertex(j), weight);
     }
 
     public static void Reset()

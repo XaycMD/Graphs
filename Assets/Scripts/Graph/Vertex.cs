@@ -5,11 +5,11 @@ namespace edu.ua.pavlusyk.masters
   public class Vertex
   {
     public int Index { get; set; }
-    public List<Vertex> ConnectedTo { get; }
+    public Dictionary<Vertex, int> ConnectedTo { get; }
 
     public Vertex()
     {
-      ConnectedTo = new List<Vertex>();
+      ConnectedTo = new Dictionary<Vertex, int>();
     }
   }
 }
