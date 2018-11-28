@@ -32,7 +32,7 @@ namespace edu.ua.pavlusyk.masters
       {
         for (int j = 0; j < total; j++)
         {
-          GraphMatrix[i, j] = Graph.VertexConnected(i, j);
+          GraphMatrix[i, j] = Graph.VertexConnected(vertices[i].Index, vertices[j].Index);
         }
       }
     }

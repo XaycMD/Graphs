@@ -50,7 +50,7 @@ namespace edu.ua.pavlusyk.masters
     {
       if (eventData.button == PointerEventData.InputButton.Left)
       {
-        (transform as RectTransform).anchoredPosition = Input.mousePosition;
+        (transform as RectTransform).anchoredPosition = MouseFollower.Instance.Transform.anchoredPosition;
         _dragged = true;
       }
       
