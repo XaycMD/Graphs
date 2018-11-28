@@ -66,15 +66,7 @@ namespace edu.ua.pavlusyk.masters
       GetVertex(j).ConnectedTo.Remove(GetVertex(i));
       OnGraphChanged.Invoke();
     }
-
-    public static void Reset()
-    {
-      VertexCount = 0;
-      _oriented = false;
-      Vertices = new List<Vertex>();
-      OnGraphChanged.Invoke();
-    }
-
+    
     public static bool VertexConnected(int i, int j)
     {
       return GetVertex(i).ConnectedTo.ContainsKey(GetVertex(j));
@@ -83,6 +75,21 @@ namespace edu.ua.pavlusyk.masters
     public static int GetEdgeWeight(int i, int j)
     {
       return Oriented ? GetVertex(i).ConnectedTo[GetVertex(j)] : Math.Abs(GetVertex(i).ConnectedTo[GetVertex(j)]);
+    }
+
+    public static void SetEdgeWeight(int i, int j, int weight)
+    {
+      GetVertex(i).ConnectedTo[GetVertex(j)] = weight;
+      GetVertex(j).ConnectedTo[GetVertex(i)] = -weight;
+      OnGraphChanged.Invoke();
+    }
+
+    public static void Reset()
+    {
+      VertexCount = 0;
+      _oriented = false;
+      Vertices = new List<Vertex>();
+      OnGraphChanged.Invoke();
     }
     
     //---------------------------------------------------------------------

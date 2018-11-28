@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ namespace edu.ua.pavlusyk.masters
 		// Editor
 		//---------------------------------------------------------------------
 
-		[SerializeField] private Text _weightText;
+		[SerializeField] private InputField _weightText;
 		[SerializeField] private GameObject _arrow;
 		
 		//---------------------------------------------------------------------
@@ -39,6 +40,7 @@ namespace edu.ua.pavlusyk.masters
 			{
 				_weight = value;
 				_weightText.text = value.ToString();
+				if(Drawn) Graph.SetEdgeWeight(StartVertex, EndVertex, value);
 			}
 		}
 
@@ -49,6 +51,7 @@ namespace edu.ua.pavlusyk.masters
 		private void Awake()
 		{
 			_transform = transform as RectTransform;
+			_weightText.onEndEdit.AddListener(SetWeight);
 		}
 
 		private void Update()
@@ -112,14 +115,17 @@ namespace edu.ua.pavlusyk.masters
 		{
 			switch (eventData.button)
 			{
-				case PointerEventData.InputButton.Left:
-					break;
 				case PointerEventData.InputButton.Right:
 					if(Drawn) Graph.DisconnectVertex(StartVertex, EndVertex);
 					EdgeDrawer.Instance.CancelDrawing();
 					Delete();
 					break;
 			}
+		}
+
+		private void SetWeight(string value)
+		{
+			Weight = Math.Abs(Convert.ToInt32(value));
 		}
 	}
 }
