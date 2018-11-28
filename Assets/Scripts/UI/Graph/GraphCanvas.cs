@@ -2,7 +2,7 @@
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class GraphCanvas : MonoBehaviour
+  public class GraphCanvas : Singleton<GraphCanvas>
   {
     //---------------------------------------------------------------------
     // Editor

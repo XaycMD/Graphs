@@ -20,6 +20,8 @@ namespace edu.ua.pavlusyk.masters
 		[SerializeField] private Color _offColor;
 		[SerializeField] private float _toggleOnPosition;
 		[SerializeField] private float _toggleOffPosition;
+
+		[SerializeField] private GameEvent _setArrowActive;
 		
 		//---------------------------------------------------------------------
 		// Internal
@@ -52,6 +54,7 @@ namespace edu.ua.pavlusyk.masters
 			else ToggleOn();
 			_on = !_on;
 			Graph.Oriented = _on;
+			_setArrowActive.Raise();
 		}
 		
 		//---------------------------------------------------------------------

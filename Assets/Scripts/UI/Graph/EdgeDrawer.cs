@@ -10,21 +10,21 @@ namespace edu.ua.pavlusyk.masters
 
     [SerializeField] private EdgeUI _edgeUiPrefab;
     [SerializeField] private RectTransform _edgesPlaceholder;
-    
+
     //---------------------------------------------------------------------
     // Internal
     //---------------------------------------------------------------------
 
-    private const float DEFAULT_LINE_WIDTH = 10f;
+    private const float DEFAULT_LINE_WIDTH = 18f;
     private EdgeUI _currentEdge;
     private int _start;
-    
+
     //---------------------------------------------------------------------
     // Properties
     //---------------------------------------------------------------------
-    
+
     public bool Drawing { get; private set; }
-    
+
     //---------------------------------------------------------------------
     // Public
     //---------------------------------------------------------------------
@@ -40,15 +40,24 @@ namespace edu.ua.pavlusyk.masters
 
     public void StopDrawing(RectTransform end, int index)
     {
-      _currentEdge.End = end;
+      if (_currentEdge.StartVertex == index || Graph.VertexConnected(_currentEdge.StartVertex, index))
+      {
+        _currentEdge.Delete();
+        CancelDrawing();
+        return;
+      }
+      
       Graph.ConnectVertex(_start, index, 1);
       _currentEdge.EndVertex = index;
+      _currentEdge.Weight = 1;
+      _currentEdge.End = end;
+      _currentEdge.Drawn = true;
+      _currentEdge.AdjustArrowPosition();
       Drawing = false;
     }
 
     public void CancelDrawing()
     {
-      _currentEdge.Delete();
       _currentEdge = null;
       Drawing = false;
     }

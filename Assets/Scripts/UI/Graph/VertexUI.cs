@@ -77,7 +77,7 @@ namespace edu.ua.pavlusyk.masters
           }
           break;
         case PointerEventData.InputButton.Right:
-          DeleteVertex();
+          if (!EdgeDrawer.Instance.Drawing) DeleteVertex();
           break;
       }
     }

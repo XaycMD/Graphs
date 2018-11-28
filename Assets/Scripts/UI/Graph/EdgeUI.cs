@@ -1,16 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace edu.ua.pavlusyk.masters
 {
 	public class EdgeUI : MonoBehaviour, IPointerClickHandler
 	{
 		//---------------------------------------------------------------------
+		// Editor
+		//---------------------------------------------------------------------
+
+		[SerializeField] private Text _weightText;
+		[SerializeField] private GameObject _arrow;
+		
+		//---------------------------------------------------------------------
 		// Internal
 		//---------------------------------------------------------------------
 
 		private RectTransform _transform;
-		private bool _drawn;
+		private bool _drawing;
+		private int _weight;
 		
 		//---------------------------------------------------------------------
 		// Properties
@@ -21,6 +30,17 @@ namespace edu.ua.pavlusyk.masters
 		public float Width { get; set; }
 		public int StartVertex { get; set; }
 		public int EndVertex { get; set; }
+		public bool Drawn { get; set; }
+
+		public int Weight
+		{
+			get { return _weight; }
+			set
+			{
+				_weight = value;
+				_weightText.text = value.ToString();
+			}
+		}
 
 		//---------------------------------------------------------------------
 		// Messages
@@ -33,8 +53,7 @@ namespace edu.ua.pavlusyk.masters
 
 		private void Update()
 		{
-			if(!_drawn) return;
-
+			if(!_drawing) return;
 			try
 			{
 				DrawLine(Start.anchoredPosition, End.anchoredPosition, Width);
@@ -54,12 +73,23 @@ namespace edu.ua.pavlusyk.masters
 			Start = start;
 			End = end;
 			Width = width;
-			_drawn = true;
+			_drawing = true;
+			_arrow.SetActive(Graph.Oriented);
 		}
 
 		public void Delete()
 		{
 			Destroy(gameObject);
+		}
+
+		public void SetArrowActive()
+		{
+			_arrow.SetActive(Graph.Oriented);
+		}
+
+		public void AdjustArrowPosition()
+		{
+			_arrow.GetComponent<RectTransform>().anchoredPosition = new Vector2(-35, 0);
 		}
 
 		//---------------------------------------------------------------------
@@ -72,8 +102,10 @@ namespace edu.ua.pavlusyk.masters
 			var angle = Vector2.Angle(direction, Vector2.right);
 			_transform.localEulerAngles = 
 				new Vector3(_transform.localEulerAngles.x, _transform.localEulerAngles.y, start.y < end.y ? angle : -angle);
+			(_weightText.transform as RectTransform).localEulerAngles = 
+				new Vector3(_transform.localEulerAngles.x, _transform.localEulerAngles.y, -_transform.localEulerAngles.z);
 			_transform.anchoredPosition = (start + end) / 2;
-			_transform.sizeDelta = new Vector2(Vector2.Distance(start, end), width);
+			_transform.sizeDelta = new Vector2(Vector2.Distance(start, end) + 10, width);
 		}
 
 		public void OnPointerClick(PointerEventData eventData)
@@ -83,7 +115,8 @@ namespace edu.ua.pavlusyk.masters
 				case PointerEventData.InputButton.Left:
 					break;
 				case PointerEventData.InputButton.Right:
-					Graph.DisconnectVertex(StartVertex, EndVertex);
+					if(Drawn) Graph.DisconnectVertex(StartVertex, EndVertex);
+					EdgeDrawer.Instance.CancelDrawing();
 					Delete();
 					break;
 			}

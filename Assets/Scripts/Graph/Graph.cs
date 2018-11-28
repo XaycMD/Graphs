@@ -7,11 +7,27 @@ namespace edu.ua.pavlusyk.masters
   public static class Graph
   {
     //---------------------------------------------------------------------
+    // Internal
+    //---------------------------------------------------------------------
+
+    private static bool _oriented;
+    
+    //---------------------------------------------------------------------
     // Properties
     //---------------------------------------------------------------------
     
     public static int VertexCount { get; private set; }
-    public static bool Oriented { get; set; }
+
+    public static bool Oriented
+    {
+      get { return _oriented; }
+      set
+      {
+        _oriented = value;
+        OnGraphChanged.Invoke();
+      }
+    }
+
     public static List<Vertex> Vertices { get; set; }
     public static Action OnGraphChanged { get; set; }
     
@@ -40,7 +56,7 @@ namespace edu.ua.pavlusyk.masters
     public static void ConnectVertex(int i, int j, int weight)
     {
       GetVertex(i).ConnectedTo.Add(GetVertex(j), weight);
-      GetVertex(j).ConnectedTo.Add(GetVertex(i), Oriented ? -weight : weight);
+      GetVertex(j).ConnectedTo.Add(GetVertex(i), -weight);
       OnGraphChanged.Invoke();
     }
 
@@ -54,9 +70,19 @@ namespace edu.ua.pavlusyk.masters
     public static void Reset()
     {
       VertexCount = 0;
-      Oriented = false;
+      _oriented = false;
       Vertices = new List<Vertex>();
       OnGraphChanged.Invoke();
+    }
+
+    public static bool VertexConnected(int i, int j)
+    {
+      return GetVertex(i).ConnectedTo.ContainsKey(GetVertex(j));
+    }
+
+    public static int GetEdgeWeight(int i, int j)
+    {
+      return Oriented ? GetVertex(i).ConnectedTo[GetVertex(j)] : Math.Abs(GetVertex(i).ConnectedTo[GetVertex(j)]);
     }
     
     //---------------------------------------------------------------------

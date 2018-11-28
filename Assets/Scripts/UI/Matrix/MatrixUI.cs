@@ -92,7 +92,7 @@ namespace edu.ua.pavlusyk.masters
         for (var j = 0; j < vertices.Count; j++)
         {
           InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 
-            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? vertices[i].ConnectedTo[vertices[j]] : 0);
+            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? Graph.GetEdgeWeight(i, j) : 0);
         }
       }
     }
