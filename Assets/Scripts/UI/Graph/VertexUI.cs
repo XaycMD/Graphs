@@ -12,7 +12,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
     
     [SerializeField] private Text _text;
-    [SerializeField] private GameObject _startIndicator;
+    [SerializeField] private Text _pathIndex;
     
     //---------------------------------------------------------------------
     // Internal
@@ -83,14 +83,18 @@ namespace edu.ua.pavlusyk.masters
       }
     }
 
-    public void OnPathHighlight(int start)
+    public void OnPathHighlight(int index, int value)
     {
-      if(start == Index) _startIndicator.SetActive(true);
+      if (index == Index)
+      {
+        _pathIndex.gameObject.SetActive(true);
+        _pathIndex.text = value.ToString();
+      }
     }
 
     public void OnHighlightOff()
     {
-      _startIndicator.SetActive(false);
+      _pathIndex.gameObject.SetActive(false);
     }
   }
 }

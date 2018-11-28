@@ -8,6 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f72a97a7e6088468c62b57a74c73e5, type: 3}
-  m_Name: HighlightStart
+  m_Script: {fileID: 11500000, guid: 02ddf7e8269a41f43a1e23c8179c8596, type: 3}
+  m_Name: PathIndex
   m_EditorClassIdentifier: 

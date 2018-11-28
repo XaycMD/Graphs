@@ -13,6 +13,12 @@ namespace edu.ua.pavlusyk.masters
 
     private static int total, count; //total->total no of nodes, count->no of even degree node
 
+    private static void Reset()
+    {
+      tempPath = new Stack<int>();
+      finalPath = new List<int>();
+    }
+    
     //To Get the all input from user
     private static void GetInput(List<Vertex> vertices)
     {
@@ -142,6 +148,7 @@ namespace edu.ua.pavlusyk.masters
     //THis is the Main Program
     public static List<Vertex> FindEulerCircuit(List<Vertex> vertices)
     {
+      Reset();
       //Get the Graph representation from user
       GetInput(vertices);
       //Decide the root

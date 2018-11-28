@@ -12,7 +12,7 @@ namespace edu.ua.pavlusyk.masters
     [SerializeField] private VertexUI _vertexUiPrefab;
     [SerializeField] private RectTransform _verticesPlaceholder;
     [SerializeField] private IntTupleEvent _highlight;
-    [SerializeField] private IntGameEvent _highlightStart;
+    [SerializeField] private IntTupleEvent _pathIndex;
     
     //---------------------------------------------------------------------
     // Messages
@@ -52,9 +52,8 @@ namespace edu.ua.pavlusyk.masters
       for (int i = 0; i < path.Count - 1; i++)
       {
         _highlight.Raise(path[i].Index, path[i + 1].Index);
+        _pathIndex.Raise(path[i].Index, i);
       }
-      
-      _highlightStart.Raise(path[0].Index);
     }
   }
 }
