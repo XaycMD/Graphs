@@ -13,6 +13,7 @@ namespace edu.ua.pavlusyk.masters
     public static int VertexCount { get; private set; }
     public static bool Oriented { get; set; }
     public static List<Vertex> Vertices { get; set; }
+    public static Action OnGraphChanged { get; set; }
     
     //---------------------------------------------------------------------
     // Public
@@ -26,16 +27,28 @@ namespace edu.ua.pavlusyk.masters
       });
 
       VertexCount++;
+      
+      OnGraphChanged.Invoke();
     }
 
     public static void DeleteVertex(int index)
     {
       Vertices.Remove(GetVertex(index));
+      OnGraphChanged.Invoke();
     }
 
     public static void ConnectVertex(int i, int j, int weight)
     {
       GetVertex(i).ConnectedTo.Add(GetVertex(j), weight);
+      GetVertex(j).ConnectedTo.Add(GetVertex(i), Oriented ? -weight : weight);
+      OnGraphChanged.Invoke();
+    }
+
+    public static void DisconnectVertex(int i, int j)
+    {
+      GetVertex(i).ConnectedTo.Remove(GetVertex(j));
+      GetVertex(j).ConnectedTo.Remove(GetVertex(i));
+      OnGraphChanged.Invoke();
     }
 
     public static void Reset()
@@ -43,6 +56,7 @@ namespace edu.ua.pavlusyk.masters
       VertexCount = 0;
       Oriented = false;
       Vertices = new List<Vertex>();
+      OnGraphChanged.Invoke();
     }
     
     //---------------------------------------------------------------------

@@ -17,6 +17,7 @@ namespace edu.ua.pavlusyk.masters
 
     private const float DEFAULT_LINE_WIDTH = 10f;
     private EdgeUI _currentEdge;
+    private int _start;
     
     //---------------------------------------------------------------------
     // Properties
@@ -28,16 +29,20 @@ namespace edu.ua.pavlusyk.masters
     // Public
     //---------------------------------------------------------------------
 
-    public void StartDrawing(RectTransform start)
+    public void StartDrawing(RectTransform start, int index)
     {
       _currentEdge = Instantiate(_edgeUiPrefab, _edgesPlaceholder);
       _currentEdge.StartDrawing(start, MouseFollower.Instance.Transform, DEFAULT_LINE_WIDTH);
+      _currentEdge.StartVertex = index;
       Drawing = true;
+      _start = index;
     }
 
-    public void StopDrawing(RectTransform end)
+    public void StopDrawing(RectTransform end, int index)
     {
       _currentEdge.End = end;
+      Graph.ConnectVertex(_start, index, 1);
+      _currentEdge.EndVertex = index;
       Drawing = false;
     }
 

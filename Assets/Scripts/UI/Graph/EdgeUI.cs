@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace edu.ua.pavlusyk.masters
 {
-	public class EdgeUI : MonoBehaviour
+	public class EdgeUI : MonoBehaviour, IPointerClickHandler
 	{
 		//---------------------------------------------------------------------
 		// Internal
@@ -18,6 +19,8 @@ namespace edu.ua.pavlusyk.masters
 		public RectTransform Start { get; set; }
 		public RectTransform End { get; set; }
 		public float Width { get; set; }
+		public int StartVertex { get; set; }
+		public int EndVertex { get; set; }
 
 		//---------------------------------------------------------------------
 		// Messages
@@ -71,6 +74,19 @@ namespace edu.ua.pavlusyk.masters
 				new Vector3(_transform.localEulerAngles.x, _transform.localEulerAngles.y, start.y < end.y ? angle : -angle);
 			_transform.anchoredPosition = (start + end) / 2;
 			_transform.sizeDelta = new Vector2(Vector2.Distance(start, end), width);
+		}
+
+		public void OnPointerClick(PointerEventData eventData)
+		{
+			switch (eventData.button)
+			{
+				case PointerEventData.InputButton.Left:
+					break;
+				case PointerEventData.InputButton.Right:
+					Graph.DisconnectVertex(StartVertex, EndVertex);
+					Delete();
+					break;
+			}
 		}
 	}
 }

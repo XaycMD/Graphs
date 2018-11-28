@@ -27,6 +27,7 @@ namespace edu.ua.pavlusyk.masters
     private void Awake()
     {
       _transform = transform as RectTransform;
+      Graph.OnGraphChanged = RedrawMatrix;
     }
 
     //---------------------------------------------------------------------
@@ -39,6 +40,11 @@ namespace edu.ua.pavlusyk.masters
       SetSize(vertices.Count);
       DrawText(vertices);
       DrawToggles(vertices);
+    }
+    
+    public void RedrawMatrix()
+    {
+      DrawMatrix(Graph.Vertices);
     }
     
     //---------------------------------------------------------------------
@@ -86,8 +92,7 @@ namespace edu.ua.pavlusyk.masters
         for (var j = 0; j < vertices.Count; j++)
         {
           InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 
-            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? vertices[i].ConnectedTo[vertices[j]] : 
-              vertices[j].ConnectedTo.ContainsKey(vertices[i]) ? vertices[j].ConnectedTo[vertices[i]] : 0);
+            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? vertices[i].ConnectedTo[vertices[j]] : 0);
         }
       }
     }

@@ -32,13 +32,6 @@ namespace edu.ua.pavlusyk.masters
       (vertex.transform as RectTransform).anchoredPosition = Input.mousePosition;
       vertex.Index = Graph.VertexCount;
       Graph.AddVertex();
-      
-      RedrawMatrix();
-    }
-
-    public void RedrawMatrix()
-    {
-      MatrixUI.Instance.DrawMatrix(Graph.Vertices);
     }
     
     public void Clear()
@@ -49,7 +42,6 @@ namespace edu.ua.pavlusyk.masters
       }
       
       Graph.Reset();
-      RedrawMatrix();
     }
   }
 }

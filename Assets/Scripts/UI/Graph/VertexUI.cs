@@ -69,11 +69,11 @@ namespace edu.ua.pavlusyk.masters
           
           if (!EdgeDrawer.Instance.Drawing)
           {
-            EdgeDrawer.Instance.StartDrawing(transform as RectTransform);
+            EdgeDrawer.Instance.StartDrawing(transform as RectTransform, Index);
           }
           else
           {
-            EdgeDrawer.Instance.StopDrawing(transform as RectTransform);
+            EdgeDrawer.Instance.StopDrawing(transform as RectTransform, Index);
           }
           break;
         case PointerEventData.InputButton.Right:
