@@ -86,13 +86,13 @@ namespace edu.ua.pavlusyk.masters
     private void DrawToggles(List<Vertex> vertices)
     {
       var position = _itemSize;
-
+      
       for (var i = 0; i < vertices.Count; i++)
       {
         for (var j = 0; j < vertices.Count; j++)
         {
           InstantiateToggle(new Vector2(position + i * _itemSize, -(position + j * _itemSize)), 
-            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? Graph.GetEdgeWeight(i, j) : 0);
+            vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? Graph.GetEdgeWeight(vertices[i].Index, vertices[j].Index) : 0);
         }
       }
     }
