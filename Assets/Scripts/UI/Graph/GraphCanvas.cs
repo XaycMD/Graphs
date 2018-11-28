@@ -32,7 +32,7 @@ namespace edu.ua.pavlusyk.masters
       if (EdgeDrawer.Instance.Drawing) return;
       
       var vertex = Instantiate(_vertexUiPrefab, _verticesPlaceholder);
-      (vertex.transform as RectTransform).anchoredPosition = Input.mousePosition;
+      (vertex.transform as RectTransform).anchoredPosition = MouseFollower.Instance.Transform.anchoredPosition;
       vertex.Index = Graph.VertexCount;
       Graph.AddVertex();
     }
