@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace edu.ua.pavlusyk.masters
 {
@@ -10,6 +11,7 @@ namespace edu.ua.pavlusyk.masters
 
     [SerializeField] private VertexUI _vertexUiPrefab;
     [SerializeField] private RectTransform _verticesPlaceholder;
+    [SerializeField] private IntTupleEvent _highlight;
     
     //---------------------------------------------------------------------
     // Messages
@@ -42,6 +44,39 @@ namespace edu.ua.pavlusyk.masters
       }
       
       Graph.Reset();
+    }
+
+    public void HighlightPath(List<Vertex> path)
+    {
+      for (int i = 0; i < path.Count - 1; i++)
+      {
+        _highlight.Raise(path[i].Index, path[i + 1].Index);
+      }
+    }
+
+    public void DEBUG_Highlight()
+    {
+      List<Vertex> vertices = new List<Vertex>
+      {
+        new Vertex
+        {
+          Index = 0
+        },
+        new Vertex
+        {
+          Index = 1
+        },
+        new Vertex
+        {
+          Index = 3
+        },
+        new Vertex
+        {
+          Index = 5
+        }
+      };
+      
+      HighlightPath(vertices);
     }
   }
 }

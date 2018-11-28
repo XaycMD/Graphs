@@ -12,7 +12,10 @@ namespace edu.ua.pavlusyk.masters
 		//---------------------------------------------------------------------
 
 		[SerializeField] private InputField _weightText;
-		[SerializeField] private GameObject _arrow;
+		[SerializeField] private Image _arrow;
+		[SerializeField] private Image _body;
+		[SerializeField] private Color _usualColor;
+		[SerializeField] private Color _highlightedColor;
 		
 		//---------------------------------------------------------------------
 		// Internal
@@ -77,7 +80,7 @@ namespace edu.ua.pavlusyk.masters
 			End = end;
 			Width = width;
 			_drawing = true;
-			_arrow.SetActive(Graph.Oriented);
+			_arrow.gameObject.SetActive(Graph.Oriented);
 		}
 
 		public void Delete()
@@ -87,12 +90,22 @@ namespace edu.ua.pavlusyk.masters
 
 		public void SetArrowActive()
 		{
-			_arrow.SetActive(Graph.Oriented);
+			_arrow.gameObject.SetActive(Graph.Oriented);
 		}
 
 		public void AdjustArrowPosition()
 		{
 			_arrow.GetComponent<RectTransform>().anchoredPosition = new Vector2(-35, 0);
+		}
+
+		public void SetHighlighted(bool value)
+		{
+			_body.color = _arrow.color = value ? _highlightedColor : _usualColor;
+		}
+
+		public void OnHighlight(int start, int end)
+		{
+			if(StartVertex == start && EndVertex == end) SetHighlighted(true);
 		}
 
 		//---------------------------------------------------------------------

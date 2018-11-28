@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114625756460783448}
   - component: {fileID: 114166795417889236}
   - component: {fileID: 114234488488687720}
+  - component: {fileID: 114190765108354546}
   m_Layer: 5
   m_Name: Edge
   m_TagString: Untagged
@@ -128,14 +129,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.47058824, b: 0.7647059, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 46a78322730e8784582724d738fe3527, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e889424fd5b09b45b2daa08a1ffcb30, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -155,7 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weightText: {fileID: 114443497361213102}
-  _arrow: {fileID: 1297068229873196}
+  _arrow: {fileID: 0}
+  _body: {fileID: 114311482000792250}
+  _usualColor: {r: 0, g: 0.47058824, b: 0.7647059, a: 1}
+  _highlightedColor: {r: 0.93725497, g: 0.3254902, b: 0.3137255, a: 1}
 --- !u!114 &114169806015510438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,6 +193,34 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114190765108354546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461059279538672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b831e53456490e988f53215b9b0d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 494e3b092dff6fd4ca4f153354a69ddd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114166795417889236}
+        m_MethodName: OnHighlight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: edu.ua.pavlusyk.masters.IntTupleUnityEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114234488488687720
 MonoBehaviour:
   m_ObjectHideFlags: 1

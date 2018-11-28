@@ -1454,6 +1454,7 @@ GameObject:
   - component: {fileID: 1068252737}
   - component: {fileID: 1068252733}
   - component: {fileID: 1068252735}
+  - component: {fileID: 1068252738}
   m_Layer: 5
   m_Name: Image_GraphCanvas
   m_TagString: Untagged
@@ -1561,6 +1562,7 @@ MonoBehaviour:
   _vertexUiPrefab: {fileID: 114359977044257834, guid: 08a933f8d89b760469ed0b49335f4b78,
     type: 2}
   _verticesPlaceholder: {fileID: 1399787473}
+  _highlight: {fileID: 11400000, guid: 494e3b092dff6fd4ca4f153354a69ddd, type: 2}
 --- !u!114 &1068252737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1577,34 @@ MonoBehaviour:
   _edgeUiPrefab: {fileID: 114166795417889236, guid: 43822d09d60247b4db62be49da14027a,
     type: 2}
   _edgesPlaceholder: {fileID: 1550196586}
+--- !u!114 &1068252738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1068252731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3318b37b5a34577429583f0b3833dd78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 72eecd95397e072428592aca9abd0024, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1068252736}
+        m_MethodName: DEBUG_Highlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1298194223
 GameObject:
   m_ObjectHideFlags: 0
