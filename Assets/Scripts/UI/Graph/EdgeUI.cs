@@ -12,7 +12,8 @@ namespace edu.ua.pavlusyk.masters
 		//---------------------------------------------------------------------
 
 		[SerializeField] private InputField _weightText;
-		[SerializeField] private Image _arrow;
+		[SerializeField] private Image _arrowEnd;
+		[SerializeField] private Image _arrowStart;
 		[SerializeField] private Image _body;
 		[SerializeField] private Color _usualColor;
 		[SerializeField] private Color _highlightedColor;
@@ -80,7 +81,7 @@ namespace edu.ua.pavlusyk.masters
 			End = end;
 			Width = width;
 			_drawing = true;
-			_arrow.gameObject.SetActive(Graph.Oriented);
+			_arrowEnd.gameObject.SetActive(Graph.Oriented);
 		}
 
 		public void Delete()
@@ -90,22 +91,35 @@ namespace edu.ua.pavlusyk.masters
 
 		public void SetArrowActive()
 		{
-			_arrow.gameObject.SetActive(Graph.Oriented);
+			_arrowEnd.gameObject.SetActive(Graph.Oriented);
 		}
 
 		public void AdjustArrowPosition()
 		{
-			_arrow.GetComponent<RectTransform>().anchoredPosition = new Vector2(-35, 0);
+			_arrowEnd.GetComponent<RectTransform>().anchoredPosition = new Vector2(-35, 0);
 		}
 
 		public void SetHighlighted(bool value)
 		{
-			_body.color = _arrow.color = value ? _highlightedColor : _usualColor;
+			if(!value) _arrowStart.gameObject.SetActive(false);
+			_body.color = _arrowEnd.color = _arrowStart.color = value ? _highlightedColor : _usualColor;
 		}
 
 		public void OnHighlight(int start, int end)
 		{
-			if(StartVertex == start && EndVertex == end) SetHighlighted(true);
+			if (StartVertex == start && EndVertex == end)
+			{
+				SetHighlighted(true);
+				_arrowEnd.gameObject.SetActive(true);
+				_arrowStart.gameObject.SetActive(false);
+			}
+
+			if (StartVertex == end && EndVertex == start)
+			{
+				SetHighlighted(true);
+				_arrowEnd.gameObject.SetActive(false);
+				_arrowStart.gameObject.SetActive(true);
+			}
 		}
 
 		//---------------------------------------------------------------------

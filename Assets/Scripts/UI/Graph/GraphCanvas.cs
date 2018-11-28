@@ -12,6 +12,7 @@ namespace edu.ua.pavlusyk.masters
     [SerializeField] private VertexUI _vertexUiPrefab;
     [SerializeField] private RectTransform _verticesPlaceholder;
     [SerializeField] private IntTupleEvent _highlight;
+    [SerializeField] private IntGameEvent _highlightStart;
     
     //---------------------------------------------------------------------
     // Messages
@@ -52,31 +53,8 @@ namespace edu.ua.pavlusyk.masters
       {
         _highlight.Raise(path[i].Index, path[i + 1].Index);
       }
-    }
-
-    public void DEBUG_Highlight()
-    {
-      List<Vertex> vertices = new List<Vertex>
-      {
-        new Vertex
-        {
-          Index = 0
-        },
-        new Vertex
-        {
-          Index = 1
-        },
-        new Vertex
-        {
-          Index = 3
-        },
-        new Vertex
-        {
-          Index = 5
-        }
-      };
       
-      HighlightPath(vertices);
+      _highlightStart.Raise(path[0].Index);
     }
   }
 }

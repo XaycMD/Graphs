@@ -12,6 +12,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
     
     [SerializeField] private Text _text;
+    [SerializeField] private GameObject _startIndicator;
     
     //---------------------------------------------------------------------
     // Internal
@@ -80,6 +81,16 @@ namespace edu.ua.pavlusyk.masters
           if (!EdgeDrawer.Instance.Drawing) DeleteVertex();
           break;
       }
+    }
+
+    public void OnPathHighlight(int start)
+    {
+      if(start == Index) _startIndicator.SetActive(true);
+    }
+
+    public void OnHighlightOff()
+    {
+      _startIndicator.SetActive(false);
     }
   }
 }

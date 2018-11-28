@@ -91,17 +91,39 @@ namespace edu.ua.pavlusyk.masters
       Vertices = new List<Vertex>();
       OnGraphChanged.Invoke();
     }
+
+    public static List<List<int>> GetMatrix()
+    {
+      var n = VertexCount;
+      var m = new List<List<int>>();
+      
+      for (int i = 0; i < n; i++)
+      {
+        var row = new List<int>();
+        
+        for (int j = 0; j < n; j++)
+        {
+          if(i == j || !VertexConnected(i, j)) continue;
+          
+          row.Add(Oriented ? GetVertex(i).ConnectedTo[GetVertex(j)] : Math.Abs(GetVertex(i).ConnectedTo[GetVertex(j)]));
+        }
+        
+        m.Add(row);
+      }
+
+      return m;
+    }
     
     //---------------------------------------------------------------------
     // Helpers
     //---------------------------------------------------------------------
-
+    
     private static bool Exist(int index)
     {
       return Vertices.Any(x => x.Index == index);
     }
 
-    private static Vertex GetVertex(int index)
+    public static Vertex GetVertex(int index)
     {
       if(Exist(index)) return Vertices.First(x => x.Index == index);
       
