@@ -123,6 +123,13 @@ namespace edu.ua.pavlusyk.masters
 			}
 		}
 
+		public void HighlightWithoutDirection(int start, int end)
+		{
+			if (StartVertex == start && EndVertex == end
+			    || StartVertex == end && EndVertex == start)
+				_body.color = _highlightedColor;
+		}
+
 		//---------------------------------------------------------------------
 		// Helpers
 		//---------------------------------------------------------------------

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace edu.ua.pavlusyk.masters
 {
-  public class Dijkstra
+  public static class Dijkstra
   {
     //---------------------------------------------------------------------
     // Public
@@ -13,7 +13,8 @@ namespace edu.ua.pavlusyk.masters
     public static List<Vertex> DijkstraAlgo(List<Vertex> vertices, int source, int destination)
     {
       var graph = ListToMatrix(vertices);
-      var path = DijkstraAlgorithm(graph, source, destination);
+      var path = DijkstraAlgorithm(graph, vertices.IndexOf(vertices.First(x => x.Index == source)),
+        vertices.IndexOf(vertices.First(x => x.Index == destination)));
 
       if (path == null) return null;
       
@@ -21,7 +22,7 @@ namespace edu.ua.pavlusyk.masters
       
       foreach (var vertex in path)
       {
-        result.Add(Graph.GetVertex(vertex));  
+        result.Add(Graph.GetVertex(vertices[vertex].Index));  
       }
 
       return result;

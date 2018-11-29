@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 114234488488687720}
   - component: {fileID: 114190765108354546}
   - component: {fileID: 114257971428294992}
+  - component: {fileID: 114133566346290872}
   m_Layer: 5
   m_Name: Edge
   m_TagString: Untagged
@@ -162,6 +163,34 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114133566346290872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461059279538672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b831e53456490e988f53215b9b0d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 927e373feebe36c4492d4491910aeb53, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114166795417889236}
+        m_MethodName: HighlightWithoutDirection
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: edu.ua.pavlusyk.masters.IntTupleUnityEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114142075993336038
 MonoBehaviour:
   m_ObjectHideFlags: 1
