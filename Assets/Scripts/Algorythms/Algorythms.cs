@@ -10,6 +10,8 @@ namespace edu.ua.pavlusyk.masters
     
     public void EulerTour()
     {
+      GraphCanvas.Instance.HighlightOff();
+      
       if (Graph.VertexCount == 0)
       {
         SnackbarError.Instance.Show("Draw graph");

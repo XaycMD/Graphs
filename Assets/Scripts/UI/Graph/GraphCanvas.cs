@@ -13,6 +13,7 @@ namespace edu.ua.pavlusyk.masters
     [SerializeField] private RectTransform _verticesPlaceholder;
     [SerializeField] private IntTupleEvent _highlight;
     [SerializeField] private IntTupleEvent _pathIndex;
+    [SerializeField] private GameEvent _highlightOff;
     
     //---------------------------------------------------------------------
     // Messages
@@ -54,6 +55,13 @@ namespace edu.ua.pavlusyk.masters
         _highlight.Raise(path[i].Index, path[i + 1].Index);
         _pathIndex.Raise(path[i].Index, i);
       }
+      
+      _pathIndex.Raise(path[path.Count - 1].Index, path.Count - 1);
+    }
+
+    public void HighlightOff()
+    {
+      _highlightOff.Raise();
     }
   }
 }

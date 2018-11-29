@@ -88,12 +88,14 @@ namespace edu.ua.pavlusyk.masters
       if (index == Index)
       {
         _pathIndex.gameObject.SetActive(true);
-        _pathIndex.text = value.ToString();
+        if(_pathIndex.text == "") _pathIndex.text = value.ToString();
+        else _pathIndex.text += ", " + value;
       }
     }
 
     public void OnHighlightOff()
     {
+      _pathIndex.text = "";
       _pathIndex.gameObject.SetActive(false);
     }
   }

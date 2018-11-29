@@ -157,8 +157,6 @@ namespace edu.ua.pavlusyk.masters
       //otherwise it will return array index of any node as root
       if (root != 0)
       {
-        if (count != 0) Console.WriteLine("Available Euler Path is");
-        else Console.WriteLine("Available Euler circuit is");
         //Find the Euler circuit
         FindEuler(root);
         var tour = new List<Vertex>();

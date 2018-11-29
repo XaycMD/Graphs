@@ -1777,6 +1777,7 @@ MonoBehaviour:
   _verticesPlaceholder: {fileID: 1399787473}
   _highlight: {fileID: 11400000, guid: 494e3b092dff6fd4ca4f153354a69ddd, type: 2}
   _pathIndex: {fileID: 11400000, guid: 0f4140b1f0a8673439c28c30f37d2a40, type: 2}
+  _highlightOff: {fileID: 11400000, guid: 074d070ec41f53547a9d74d449747406, type: 2}
 --- !u!114 &1068252737
 MonoBehaviour:
   m_ObjectHideFlags: 0
