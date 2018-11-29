@@ -34,7 +34,7 @@ namespace edu.ua.pavlusyk.masters
     //---------------------------------------------------------------------
     // Public
     //---------------------------------------------------------------------
-
+    
     public static void AddVertex()
     {
       Vertices.Add(new Vertex
@@ -92,11 +92,7 @@ namespace edu.ua.pavlusyk.masters
       OnGraphChanged.Invoke();
     }
     
-    //---------------------------------------------------------------------
-    // Helpers
-    //---------------------------------------------------------------------
-    
-    private static bool Exist(int index)
+    public static bool Exist(int index)
     {
       return Vertices.Any(x => x.Index == index);
     }
