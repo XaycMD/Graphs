@@ -125,5 +125,19 @@ namespace edu.ua.pavlusyk.masters
       var spanningTree = masters.Kruskal.KruskalAlg(Graph.Vertices);
       GraphCanvas.Instance.HighlightTree(spanningTree);
     }
+    
+    public void Prim()
+    {
+      GraphCanvas.Instance.HighlightOff();
+
+      if (Graph.VertexCount == 0)
+      {
+        SnackbarError.Instance.Show("Draw graph");
+        return;
+      }
+
+      var spanningTree = masters.Prim.PrimAlgorithm(Graph.Vertices);
+      GraphCanvas.Instance.HighlightTree(spanningTree);
+    }
   }
 }

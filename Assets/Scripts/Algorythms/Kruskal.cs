@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,7 +8,19 @@ namespace edu.ua.pavlusyk.masters
   {
     public static List<Edge> KruskalAlg(List<Vertex> vertices)
     {
-      return KruskalAlg(vertices.Count, VerticesToEdgeList(vertices));
+      var edges = KruskalAlg(vertices.Count, VerticesToEdgeList(vertices));
+      var result = new List<Edge>();
+
+      foreach (var edge in edges)
+      {
+        result.Add(new Edge
+        {
+          StartNode = Graph.GetVertex(vertices[edge.StartNode].Index).Index,
+          EndNode = Graph.GetVertex(vertices[edge.EndNode].Index).Index
+        });
+      }
+
+      return result;
     }
 
     //---------------------------------------------------------------------
@@ -28,7 +41,8 @@ namespace edu.ua.pavlusyk.masters
             edges.Add(new Edge
             {
               StartNode = i,
-              EndNode = j
+              EndNode = j,
+              Weight = Math.Abs(vertices[i].ConnectedTo[vertices[j]])
             });
           }
         }
@@ -40,7 +54,7 @@ namespace edu.ua.pavlusyk.masters
     private static List<Edge> KruskalAlg(int numberOfVertices, List<Edge> edges)
     {
       // Inital sort
-      //edges.Sort();
+      edges = edges.OrderBy(e => e.Weight).ToList();
 
       // Set parents table
       var parent = Enumerable.Range(0, numberOfVertices).ToArray();
