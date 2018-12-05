@@ -15,6 +15,12 @@ namespace edu.ua.pavlusyk.masters
     [SerializeField] private IntTupleEvent _highlightNoDirection;
     [SerializeField] private IntTupleEvent _pathIndex;
     [SerializeField] private GameEvent _highlightOff;
+   
+    //---------------------------------------------------------------------
+    // Internal
+    //---------------------------------------------------------------------
+
+    private int MAX_VERTICES = 18;
     
     //---------------------------------------------------------------------
     // Messages
@@ -32,6 +38,13 @@ namespace edu.ua.pavlusyk.masters
     public void CreateVertex()
     {
       if (EdgeDrawer.Instance.Drawing) return;
+      
+      if (Graph.Vertices.Count >= 18)
+      {
+        SnackbarError.Instance.Show("Max vertices count");
+        return;
+      }
+      
       
       var vertex = Instantiate(_vertexUiPrefab, _verticesPlaceholder);
       (vertex.transform as RectTransform).anchoredPosition = MouseFollower.Instance.Transform.anchoredPosition;

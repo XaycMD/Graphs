@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -116,7 +117,7 @@ namespace edu.ua.pavlusyk.masters
     {
       GraphCanvas.Instance.HighlightOff();
 
-      if (Graph.VertexCount == 0)
+      if (Graph.Vertices.Count == 0)
       {
         SnackbarError.Instance.Show("Draw graph");
         return;
@@ -130,7 +131,7 @@ namespace edu.ua.pavlusyk.masters
     {
       GraphCanvas.Instance.HighlightOff();
 
-      if (Graph.VertexCount == 0)
+      if (Graph.Vertices.Count == 0)
       {
         SnackbarError.Instance.Show("Draw graph");
         return;
@@ -138,6 +139,22 @@ namespace edu.ua.pavlusyk.masters
 
       var spanningTree = masters.Prim.PrimAlgorithm(Graph.Vertices);
       GraphCanvas.Instance.HighlightTree(spanningTree);
+    }
+
+    public void Ford()
+    {
+      GraphCanvas.Instance.HighlightOff();
+
+      if (Graph.Vertices.Count == 0)
+      {
+        SnackbarError.Instance.Show("Draw graph");
+        return;
+      }
+  
+      var f = new Ford(Graph.Vertices);
+      var flow = f.MaxFlow(0, 5);
+      Debug.Log(flow);
+      var path = f.GetPath();
     }
   }
 }
