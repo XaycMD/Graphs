@@ -42,8 +42,7 @@ namespace edu.ua.pavlusyk.masters
         for (int j = 0; j < n; j++)
         {
           graph[i, j] = vertices[i].ConnectedTo.ContainsKey(vertices[j]) ? 
-            vertices[i].ConnectedTo[vertices[j]] > 0 ? 
-              vertices[i].ConnectedTo[vertices[j]] : 0 : 0;
+            Graph.Oriented ? vertices[i].ConnectedTo[vertices[j]] : Math.Abs(vertices[i].ConnectedTo[vertices[j]]) : 0;
         }
       }
 
