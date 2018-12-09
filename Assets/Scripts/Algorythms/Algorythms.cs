@@ -150,11 +150,7 @@ namespace edu.ua.pavlusyk.masters
         SnackbarError.Instance.Show("Draw graph");
         return;
       }
-  
-      var f = new Ford(Graph.Vertices);
-      var flow = f.MaxFlow(0, 5);
-      Debug.Log(flow);
-      var path = f.GetPath();
+
     }
   }
 }

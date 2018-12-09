@@ -58,8 +58,10 @@ namespace edu.ua.pavlusyk.masters
       {
         Destroy(vertex.gameObject);
       }
-      
+
+      var directed = Graph.Oriented;
       Graph.Reset();
+      Graph.Oriented = directed;
     }
 
     public void HighlightPath(List<Vertex> path)
