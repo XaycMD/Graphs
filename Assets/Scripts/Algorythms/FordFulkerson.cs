@@ -15,7 +15,7 @@ namespace edu.ua.pavlusyk.masters
     private static List<Vertex> Vertices { get; set; }
     private const float MaxValue = float.MaxValue;
     public float MaxFlow { get; set; }
-    public float MinCut { get; set; }
+    public static List<edu.ua.pavlusyk.masters.Edge> MinCut { get; set; }
 
     public FordFulkerson()
     {
@@ -28,6 +28,7 @@ namespace edu.ua.pavlusyk.masters
       Nodes = new Dictionary<int, Node>();
       Edges = new Dictionary<string, Edge>();
       Vertices = vertices;
+      MinCut = new List<masters.Edge>();
     }
 
     private void GetLists(List<Vertex> vertices, out string[] nodes, out string[] edges)
@@ -206,6 +207,12 @@ namespace edu.ua.pavlusyk.masters
       {
         maxflow += edge.Capacity;
         PrintLn(edge.Info());
+        MinCut.Add(new masters.Edge
+        {
+          StartNode = Convert.ToInt32(edge.NodeFrom.Name),
+          EndNode = Convert.ToInt32(edge.NodeTo.Name),
+          Weight = (int)edge.Capacity
+        });
       }
 
       PrintLn("min-cut total maxflow = " + maxflow);
@@ -306,6 +313,7 @@ namespace edu.ua.pavlusyk.masters
       Nodes.Clear();
       Edges.Clear();
       Node.ResetCounter();
+      MinCut = new List<masters.Edge>();
     }
 
     public class Node

@@ -161,6 +161,7 @@ namespace edu.ua.pavlusyk.masters
       var ford = new FordFulkerson(Graph.Vertices);
       ford.Run(from, to);
       _showMaxFlow.Raise((int)ford.MaxFlow);
+      GraphCanvas.Instance.HighlightTree(FordFulkerson.MinCut);
     }
     
     //---------------------------------------------------------------------

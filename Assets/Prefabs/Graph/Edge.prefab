@@ -234,7 +234,7 @@ MonoBehaviour:
   _arrowStart: {fileID: 114142075993336038}
   _body: {fileID: 114311482000792250}
   _usualColor: {r: 0, g: 0.47058824, b: 0.7647059, a: 1}
-  _highlightedColor: {r: 0.40000004, g: 0.73333335, b: 0.4156863, a: 1}
+  _highlightedColor: {r: 0.93725497, g: 0.3254902, b: 0.3137255, a: 1}
 --- !u!114 &114169806015510438
 MonoBehaviour:
   m_ObjectHideFlags: 1
