@@ -13,6 +13,10 @@ namespace edu.ua.pavlusyk.masters
 
     [SerializeField] private InputField _from;
     [SerializeField] private InputField _to;
+    [SerializeField] private InputField _fromFord;
+    [SerializeField] private InputField _toFord;
+    [SerializeField] private IntGameEvent _showPathLength;
+    [SerializeField] private IntGameEvent _showMaxFlow;
 
     //---------------------------------------------------------------------
     // Public
@@ -73,6 +77,7 @@ namespace edu.ua.pavlusyk.masters
       }
 
       GraphCanvas.Instance.HighlightPath(path);
+      _showPathLength.Raise(GetPathLength(path));
     }
 
     public void FloydWarshall()
@@ -97,20 +102,7 @@ namespace edu.ua.pavlusyk.masters
       if (!Graph.Exist(from) || !Graph.Exist(to))
       {
         SnackbarError.Instance.Show("Vertex does not exist");
-        return;
       } 
-
-      //masters.FloydWarshall.FloydWarshallAlgorithm(Graph.Vertices);
-      
-      //var path = masters.FloydWarshall.FloydWarshallAlgorithm(Graph.Vertices, from, to);
-
-//      if (path == null)
-//      {
-//        SnackbarError.Instance.Show("Path does not exist");
-//        return;
-//      }
-//
-//      GraphCanvas.Instance.HighlightPath(path);
     }
 
     public void Kruskal()
@@ -150,7 +142,41 @@ namespace edu.ua.pavlusyk.masters
         SnackbarError.Instance.Show("Draw graph");
         return;
       }
+      
+      if (_fromFord.text == "" || _toFord.text == "")
+      {
+        SnackbarError.Instance.Show("Enter vertices");
+        return;
+      }
+      
+      var from = Convert.ToInt32(_fromFord.text);
+      var to = Convert.ToInt32(_toFord.text);
 
+      if (!Graph.Exist(from) || !Graph.Exist(to))
+      {
+        SnackbarError.Instance.Show("Vertex does not exist");
+        return;
+      }
+      
+      var ford = new FordFulkerson(Graph.Vertices);
+      ford.Run(from, to);
+      _showMaxFlow.Raise((int)ford.MaxFlow);
+    }
+    
+    //---------------------------------------------------------------------
+    // Helpers
+    //---------------------------------------------------------------------
+
+    private int GetPathLength(List<Vertex> path)
+    {
+      var sum = 0;
+      
+      for (int i = 0; i < path.Count - 1; i++)
+      {
+        sum += Graph.GetEdgeWeight(path[i].Index, path[i + 1].Index);
+      }
+
+      return sum;
     }
   }
 }
