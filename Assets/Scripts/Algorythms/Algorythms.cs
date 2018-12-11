@@ -42,6 +42,27 @@ namespace edu.ua.pavlusyk.masters
 
       GraphCanvas.Instance.HighlightPath(path);
     }
+    
+    public void HamiltonianCycle()
+    {
+//      GraphCanvas.Instance.HighlightOff();
+//
+//      if (Graph.VertexCount == 0)
+//      {
+//        SnackbarError.Instance.Show("Draw graph");
+//        return;
+//      }
+//
+//      var ham = new Hamilton();
+//
+//      if (!pathExists)
+//      {
+//        SnackbarError.Instance.Show("Euler Path or Circuit not Possible");
+//        return;
+//      }
+//
+//      GraphCanvas.Instance.HighlightPath(path);
+    }
 
     public void Dijkstra()
     {
@@ -163,7 +184,6 @@ namespace edu.ua.pavlusyk.masters
       _showMaxFlow.Raise((int)ford.MaxFlow);
       GraphCanvas.Instance.HighlightTree(FordFulkerson.MinCut);
     }
-    
     //---------------------------------------------------------------------
     // Helpers
     //---------------------------------------------------------------------
